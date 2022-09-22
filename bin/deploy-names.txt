@@ -1,0 +1,1 @@
+blood	/home/notasek/Martin/Development-Wesnoth/Blood_Honor/current/Blood_Honor	~/.local/share/wesnoth/1.12/data/add-ons

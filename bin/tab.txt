@@ -1,0 +1,9 @@
+BUT1 BUT2 BUT3 BUT4 TOUCH TOUCH2 GEST GEST2
+"Wacom Bamboo 2FG 4x5 Pad pad" button 2
+"Wacom Bamboo 2FG 4x5 Pad pad" button 8
+"Wacom Bamboo 2FG 4x5 Pad pad" button 9
+"Wacom Bamboo 2FG 4x5 Pad pad" button 1
+"Wacom Bamboo 2FG 4x5 Pad pad" Touch
+"Wacom Bamboo 2FG 4x5 Finger touch" Touch
+"Wacom Bamboo 2FG 4x5 Pad pad" Gesture
+"Wacom Bamboo 2FG 4x5 Finger touch" Gesture

@@ -1,0 +1,4 @@
+loc	/home/tr949/.local/bin
+game /home/tr949/cardgames
+scripts	/home/tr949/hedgehog/scripts/misc
+fr	/home/tr949/go/src/github.deutsche-boerse.de/dev/hedgehog/frontend

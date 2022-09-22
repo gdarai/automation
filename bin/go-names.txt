@@ -1,0 +1,9 @@
+loc	/home/tr949/.local/bin
+game	/home/tr949/cardgames
+scripts	/home/tr949/go/src/github.deutsche-boerse.de/dev/hedgehog/scripts/misc
+fr	/home/tr949/go/src/github.deutsche-boerse.de/dev/hedgehog/frontend
+sb	/home/tr949/Sandbox
+pat	/home/tr949/rica.pat/src/main/frontend
+doom	/home/tr949/cardgames/zombies_doom
+pat-root	/home/tr949/rica.pat
+pat-oa	/home/tr949/rica.pat/target/generated-sources/openapi

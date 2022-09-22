@@ -1,0 +1,7 @@
+Select sm. Word	ct    +d
+Comment		ct    +/
+
+Grammar		ct+sh +l
+
+Delete line	ct+sh +k
+Duplicate line	ct+sh +d

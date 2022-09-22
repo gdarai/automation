@@ -1,0 +1,14 @@
+[tT][xX][tT]	g
+[sS][hH]	g
+[pP][lL]	g
+[sS][tT][rR]	n
+[aA][vV][iI]	v
+[jJ][pP][gG]	m
+[pP][nN][gG]	m
+[xX][cC][fF]	gp
+[xX][lL][sS]	o
+[xX][lL][sS][xX]	o
+[dD][oO][cC]	o
+[dD][oO][cC][xX]	o
+[mM][pP]3	v
+[pP][dD][fF]	pdf

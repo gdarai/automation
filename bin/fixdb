@@ -1,0 +1,14 @@
+echo "==============="
+echo "== Conflicts =="
+echo "==============="
+echo
+sudo lsof -i :5432
+sudo kill $(lsof -t -i :5432)
+sudo service postgresql stop
+echo
+echo "==============="
+echo "== After Fix =="
+echo "==============="
+echo
+sudo lsof -i :5432
+

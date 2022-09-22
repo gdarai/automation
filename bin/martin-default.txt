@@ -1,0 +1,11 @@
+gogo fr
+npm run dev
+npm run watch-test
+npm run storybook
+npm run lint
+silentcast / import
+git clean -df
+yarn reset
+sudo dhclient -r -v
+ncu
+https://www.youtube.com/watch?v=MzRCDLre1b4

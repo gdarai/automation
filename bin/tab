@@ -1,0 +1,80 @@
+#!/usr/bin/bash
+xPATH="/home/notasek/.local/bin"
+xFILE="tab.txt"
+
+function search_array() {
+    index=0
+    while [ "$index" -lt "${#myArray[@]}" ]; do
+        if [ "${myArray[$index]}" = "$1" ]; then
+            echo $index
+            return
+        fi
+        let "index++"
+    done
+    echo "-1"
+}
+
+echo "Tablet controlling tool by Darai 2014"
+xTOOL=$@
+xTOOL=($xTOOL)
+echo ${xTOOL[0]}
+echo ${xTOOL[1]}
+if [ "${xTOOL[0]}" == "" ]
+then
+	xInt=-1
+	echo "tab <NAME> <Value> - Set new value for the particular name"
+	echo "tab <NAME>      - Activate the particular preset tab_NAME.sh"
+	echo "Listing existing buttons:"
+	printf "%15s     %s\n" "NAME  " "CURRENT VALUE"
+	while read -r xLINE
+		do
+			if [ $xInt == -1 ]
+			then
+				xNames=($xLINE)
+			else
+				xCMD="eval xsetwacom --get "$xLINE
+				xOUT=`$xCMD`
+				printf "%15s     %s\n" "${xNames[$xInt]}" "$xOUT"
+			fi
+			xInt=$(( $xInt + 1 ))
+		done < $xPATH"/"$xFILE
+	echo "Listing existing presets:"
+	for xAL in `ls $xPATH | grep -P "^tab_.*.sh"`; do
+		echo $xAL
+	done
+	exit
+fi
+if [ "${xTOOL[1]}" == "" ]
+then
+	xName="tab_"${xTOOL[0]}".sh"
+	echo "Running preset: "$xName
+	xCMD=$xPATH"/"$xName
+	`$xCMD`
+	exit
+fi
+xInt=-1
+echo "Setting command '"${xTOOL[1]}"' for name '"${xTOOL[0]}"'."
+while read -r xLINE
+do
+	if [ $xInt == -1 ]
+	then
+		myArray=($xLINE)
+		index=$(search_array ${xTOOL[0]})
+		xCMD=""
+	else
+		if [ $xInt == $index ]
+		then
+			xCMD=$xLINE
+		fi
+	fi
+	xInt=$(( $xInt + 1 ))
+done < $xPATH"/"$xFILE
+if [ $index == -1 ]
+then
+	echo "Unknown name '"${xTOOL[0]}"' stopping process."
+	echo "Allowed names: "${myArray[*]}
+	exit
+fi
+xCMD="eval xsetwacom --set "$xCMD" "${xTOOL[1]}
+echo $xCMD
+`$xCMD`

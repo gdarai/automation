@@ -1,0 +1,103 @@
+{
+  "extends": [
+    "plugin:jest/all",
+    "plugin:jest-formatting/strict",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react-redux/recommended",
+    "plugin:jsdoc/recommended"
+    ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-redux",
+    "jsx-a11y",
+    "import",
+    "jest",
+    "jest-formatting",
+    "testing-library",
+    "jest-dom",
+    "jsdoc",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "rules": {
+    "no-console": "off",
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+    "class-methods-use-this": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react/no-unused-prop-types": "off",
+    "react-redux/no-unused-prop-types": "off",
+    "react/prop-types": "off",
+    "jsdoc/tag-lines": "off",
+    "react/forbid-prop-types": ["off", { "forbid": ["object"]}],
+    "react/prefer-stateless-function": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "warn",
+    "max-len": ["warn", 150],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-use-before-define": "off",
+    "func-names": ["error", "never"],
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/aria-role": ["error", {"ignoreNonDOM": true}],
+    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+    "no-confusing-arrow": "off",
+    "no-extra-boolean-cast": "off",
+    "prefer-destructuring": "off",
+    "no-restricted-globals": "off",
+    "react/jsx-closing-tag-location": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-access-state-in-setstate": "off",
+    "no-extra-parens": ["error", "all", { "ignoreJSX": "all", "nestedBinaryExpressions": false, "returnAssign": false }],
+    "import/no-absolute-path": "off",
+    "jsdoc/require-param": "off",
+    "jsdoc/require-returns": "off",
+    "jsdoc/require-param-type": "off",
+    "jsdoc/require-param-description": "off",
+    "jsdoc/check-param-names": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "jest/require-hook": "off",
+    "react-hooks/exhaustive-deps": ["error"],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-vars": "off",
+    "jsdoc/require-jsdoc": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
+  },
+  "settings": {
+    "propWrapperFunctions": [
+      "exactPropTypes"
+    ],
+    "import/resolver": "webpack",
+    "jsdoc": {
+      "preferredTypes": [
+        "component",
+        "wrapper"
+      ]
+    }
+  }
+}

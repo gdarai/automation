@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "es2018", "dom"],
+    "target": "es6",
+    "noImplicitAny": false,
+    "jsx": "react",
+    "rootDir": "src",
+    "outDir": "build",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "allowUmdGlobalAccess": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "app/*": [
+        "src/*"
+      ],
+      "test/*": [
+        "test/*"
+      ],
+    },
+  },
+  "include": [
+    "src/**/*",
+    "modules.d.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.*",
+    "src/**/*.stories.*"
+  ]
+}

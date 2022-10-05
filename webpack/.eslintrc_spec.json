@@ -1,0 +1,87 @@
+{
+  "extends": [
+    "plugin:jest/all",
+    "plugin:jest-formatting/strict",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react-redux/recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "react-redux",
+    "jsx-a11y",
+    "import",
+    "jest",
+    "jest-formatting",
+    "testing-library",
+    "jest-dom",
+    "jsdoc"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "expect": true
+  },
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+    "comma-dangle": ["error", "always-multiline"],
+    "react/require-default-props": "off",
+    "react/no-unused-prop-types": "off",
+    "max-len": ["warn", 150],
+    "no-param-reassign": ["error", { "props": false }],
+    "func-names": ["error", "never"],
+    "no-unused-expressions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/aria-role": ["error", {"ignoreNonDOM": true}],
+    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+    "space-before-function-paren": "off",
+    "padded-blocks": "off",
+    "prefer-destructuring": "off",
+    "no-restricted-globals": "off",
+    "react/jsx-closing-tag-location": "off",
+    "no-undef": "off",
+    "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-extra-parens": ["error", "all", { "ignoreJSX": "all", "nestedBinaryExpressions": false, "returnAssign": false }],
+    "jest/no-hooks": "off",
+    "jest/expect-expect": "off",
+    "jsdoc/require-param": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/require-top-level-describe": "off",
+    "jest/valid-title": "off",
+    "jest/no-identical-title": "off",
+    "react/jsx-filename-extension": "off",
+    "jest/prefer-expect-assertions": "off",
+    "jest/no-if": "off",
+    "jest/no-disabled-tests": "off",
+    "jest/require-top-level-describe": "off",
+    "jest/no-commented-out-tests": "warn",
+    "testing-library/no-render-in-setup": "off",
+    "testing-library/prefer-screen-queries": "off",
+    "jest/no-conditional-in-test": "off",
+    "jest/require-hook": "off"
+  },
+  "settings": {
+    "propWrapperFunctions": [
+      "exactPropTypes"
+    ],
+    "import/resolver": "webpack"
+  }
+}

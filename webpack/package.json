@@ -1,0 +1,201 @@
+{
+  "name": "packageFile",
+  "scripts": {
+    "dev": "webpack serve --hot --config webpack.development.config.js",
+    "dev-with-context": "ROUTER_BROWSER_MODE=true webpack serve --hot --config webpack.development.config.js",
+    "build": "webpack --env production --config webpack.production.config.js",
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook",
+    "reset": "git status && git add -A && git stash && git stash drop && git clean -df && git status",
+    "lint": "npm run lint-ts && npm run lint-spec",
+    "lint-fix": "npm run lint-ts-fix && npm run lint-spec-fix",
+    "lint-ts": "eslint --ext .tsx --ext .ts -c .eslintrc.json --ignore-pattern \"*.spec.*\" src",
+    "lint-spec": "eslint --ext .spec.tsx --ext .spec.ts -c .eslintrc_spec.json src",
+    "lint-ts-fix": "eslint --fix --ext .tsx --ext .ts -c .eslintrc.json --ignore-pattern \"*.spec.*\" src",
+    "lint-spec-fix": "eslint --fix --ext .spec.tsx --ext .spec.ts -c .eslintrc_spec.json src",
+    "docs-open": "npm run docs && google-chrome docs/index.html",
+    "docs": "jsdoc src -r -c jsdoc.conf.json -d docs --readme README.md",
+    "apidocs-open": "google-chrome ../../../target/site/apidocs/index.html",
+    "test-fast": "jest --detectLeaks --logHeapUsage --config ./jest.config.json",
+    "test": "jest --logHeapUsage --runInBand --config ./jest.config.json",
+    "test-one": "jest --config ./jest.config.json",
+    "test-node": "node --expose-gc ./node_modules/.bin/jest --logHeapUsage --runInBand",
+    "test-node-chrome": "node --inspect-brk --expose-gc ./node_modules/.bin/jest --logHeapUsage --runInBand",
+    "test-update": "jest --logHeapUsage --runInBand --updateSnapshot --config ./jest.config.json",
+    "license": "license-checker --unknown --production --exclude \"MIT,ISC,BSD,Apache 2.0,Apache-2.0\"",
+    "license-all": "license-checker --unknown --exclude \"MIT,ISC,BSD,Apache 2.0,Apache-2.0\"",
+    "license-csv": "license-checker --unknown --csv --customPath licenseFormat.json --production > used_licences.csv",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile"
+  },
+  "peerDependencies": {
+    "react-is": "^17.0.2"
+  },
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "assert": "^1.5.0",
+    "easy-peasy": "^5.0.3",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-jest-formatting": "^2.0.0",
+    "file-saver": "^2.0.5",
+    "i18next": "^21.6.13",
+    "js-cookie": "^3.0.1",
+    "jsonschema": "^1.4.0",
+    "license-checker": "^25.0.1",
+    "moment": ">=2.29.2",
+    "prop-types": "^15.8.1",
+    "prop-types-exact": "^1.2.0",
+    "react": "^18.0.0",
+    "react-datepicker": "^4.6.0",
+    "react-dom": "^18.0.0",
+    "react-i18next": "^11.15.6",
+    "react-is": "^17.0.2",
+    "react-localization": "^1.0.17",
+    "react-router-dom": "^6.0.2",
+    "snapsvg": "^0.5.1",
+    "styled-components": "^5.2.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^3.6.4",
+    "use-error-boundary": "^2.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-proposal-do-expressions": "^7.12.1",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
+    "@babel/plugin-proposal-function-bind": "^7.12.1",
+    "@babel/plugin-proposal-function-sent": "^7.12.1",
+    "@babel/plugin-proposal-json-strings": "^7.12.1",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.12.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
+    "@babel/plugin-proposal-pipeline-operator": "^7.12.1",
+    "@babel/plugin-proposal-throw-expressions": "^7.12.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-react-jsx": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@storybook/builder-webpack5": "^6.5.0-alpha.62",
+    "@storybook/manager-webpack5": "^6.5.0-alpha.62",
+    "@storybook/react": "^6.5.0-alpha.62",
+    "@testing-library/dom": "^7.26.3",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^13.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "@webpack-cli/serve": "^1.2.2",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.2",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-istanbul": "^6.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "better-docs": "^2.4.0-beta.9",
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
+    "depcheck": "^1.4.2",
+    "eslint": "^8.14.0",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest-dom": "^3.2.4",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-redux": "^3.3.0",
+    "eslint-plugin-storybook": "^0.5.9--canary.acfda00.0",
+    "eslint-plugin-testing-library": "^5.3.1",
+    "eslint-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^26.6.2",
+    "jsdoc": "^3.6.6",
+    "jsdoc-babel": "^0.5.0",
+    "jsdom": "^16.4.0",
+    "minimist": ">=1.2.6",
+    "number-currency-format": "^1.0.10",
+    "popper.js": "^1.16.1",
+    "prismjs": ">=1.27.0",
+    "pug": "^3.0.0",
+    "pug3-loader": "^2.4.3",
+    "storybook-addon-designs": "^6.3.1",
+    "typescript": "^4.5.2",
+    "util": "^0.11.1",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": ">=4.8.1",
+    "webpack-merge": "^5.3.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/preset-typescript"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    },
+    "plugins": [
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-syntax-import-meta",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-json-strings",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      "@babel/plugin-proposal-function-sent",
+      "@babel/plugin-proposal-export-namespace-from",
+      "@babel/plugin-proposal-numeric-separator",
+      "@babel/plugin-proposal-throw-expressions",
+      "@babel/plugin-proposal-export-default-from",
+      "@babel/plugin-proposal-logical-assignment-operators",
+      "@babel/plugin-proposal-optional-chaining",
+      [
+        "@babel/plugin-proposal-pipeline-operator",
+        {
+          "proposal": "minimal"
+        }
+      ],
+      "@babel/plugin-proposal-nullish-coalescing-operator",
+      "@babel/plugin-proposal-do-expressions",
+      "@babel/plugin-proposal-function-bind",
+      "@babel/plugin-transform-runtime",
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ],
+          "alias": {
+            "test": "./test"
+          }
+        }
+      ]
+    ]
+  }
+}

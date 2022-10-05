@@ -1,0 +1,18 @@
+#storybook
+storybook-static/
+
+#npm packaging folders
+.vscode/
+node/
+node_modules/
+build/
+dist/
+etc/
+npm-debug.log
+used_licences.csv
+
+#dependency tree output
+dependency.json
+
+#frontend generated doc
+docs/

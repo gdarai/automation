@@ -1,0 +1,4 @@
+specials: ["webpack","babel","eslint"]
+ignores: ["webpack-cli","pug3-loader","pug","jsdom","jsdoc-babel","jest","eslint-plugin-storybook","eslint-import-resolver-webpack","depcheck","better-docs","babel-loader","babel-loader","@webpack-cli/serve","@storybook/react","@storybook/builder-webpack5","babel-jest","@babel/register","@babel/plugin-proposal-object-rest-spread","@babel/cli","typescript","license-checker", "js-cookie", "number-currency-format", "popper.js", "prop-types", "prop-types-exact", "react-datepicker", "react-localization", "ts-loader", "use-error-boundary", "child_process", "util", "@storybook/manager-webpack5", "webpack-dev-server", "babel-eslint", "assert", "minimist", "prismjs"]
+
+skipMissing: true
